@@ -31,8 +31,8 @@ const Header = () => {
             </div>
           </div>
           <div className='tag-cmp app__flex'>
-            <p className='p-text'>Web Developer</p>
             <p className='p-text'>Full Stack Software Engineer</p>
+            <p className='p-text'>Web Developer</p>
             <p className='p-text'>Supply Chain Specialist</p>
           </div>
         </div>
@@ -56,7 +56,7 @@ const Header = () => {
         whileInView={scaleVariants.whileInView}
         className='app__header-circles'
       >  
-        {[images.flutter, images.redux, images.sass].map((circle, index) => (
+        {['https://skillicons.dev/icons?i=mongodb', 'https://skillicons.dev/icons?i=express', 'https://skillicons.dev/icons?i=react', 'https://skillicons.dev/icons?i=nodejs'].map((circle, index) => (
           <div className='circle-cmp app__flex' key={`circle-${index}`}>
             <img src={circle} alt="circle" />
           </div>

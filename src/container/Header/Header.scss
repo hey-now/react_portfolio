@@ -115,24 +115,33 @@
   }
   div:nth-child(2) {
     margin: 1.75rem;
+    width: 120px;
+    height: 120px;
+  }
+  div:nth-child(3) {
     width: 150px;
     height: 150px;
   }
-  div:nth-child(3) {
-    width: 70px;
-    height: 70px;
+  div:nth-child(4) {
+    margin: 1.75rem;
+    width: 90px;
+    height: 90px;
   }
 
   @media screen and (min-width: 2000px) {
     div:nth-child(1) {
-      width: 400px;
-      height: 400px;
+      width: 200px;
+      height: 200px;
     }
     div:nth-child(2) {
-      width: 170px;
-      height: 170px;
+      width: 300px;
+      height: 300px;
     }
     div:nth-child(3) {
+      width: 350px;
+      height: 350px;
+    }
+    div:nth-child(4) {
       width: 200px;
       height: 200px;
     }
