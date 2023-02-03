@@ -9,9 +9,9 @@ const Header = () => {
     whileInView: {
       scale: [0, 1],
       opacity: [0, 1],
-      transistion: {
+      transition: {
         duration: 1,
-        ease: 'easeInOut'
+        ease: 'easeInOut',
       }
     }
   }
@@ -19,7 +19,7 @@ const Header = () => {
     <div id='home' className='app__header app__flex'>
       <motion.div
         whileInView={{ x: [-100, 0], opacity: [0, 1] }}
-        transistion={{ duration: 10 }}
+        transition={{ duration: 1 }}
         className='app__header-info'
       >
         <div className='app__header-badge'>
@@ -30,22 +30,27 @@ const Header = () => {
               <h1 className='head-text'>Andrew</h1>
             </div>
           </div>
-          <div className='tag-cmp app__flex'>
-            <p className='p-text'>Full Stack Software Engineer</p>
-            <p className='p-text'>Web Developer</p>
-            <p className='p-text'>Supply Chain Specialist</p>
-          </div>
+          <motion.div
+            whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+            transition={{ duration: 2 }}
+          >
+            <div className='tag-cmp app__flex'>
+              <p className='p-text'>Full Stack Software Engineer</p>
+              <p className='p-text'>Web Developer</p>
+              <p className='p-text'>Supply Chain Specialist</p>
+            </div>
+          </motion.div>
         </div>
       </motion.div>
       <motion.div
         whileInView={{ opacity: [0, 1] }}
-        transistion={{ duration: 0.5, delayChildren: 0.5 }}
+        transition={{ duration: 2, delayChildren: 2 }}
         className='app__header-img'
       >
         <img src={images.profile} alt="profile_bg" />
         <motion.img
-          whileInView={{ scale: [0, 1] }}
-          transistion={{ duration: 1, ease: 'easeInOut' }}
+          whileInView={{ opacity: [0, 1] }}
+          transition={{ duration: 1, ease: 'easeInOut' }}
           src={images.circle}
           alt="profile_circle"
           className='overlay_circle'
