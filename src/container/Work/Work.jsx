@@ -1,10 +1,10 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { AiFillEye, AiFillGithub } from 'react-icons/ai'
-import { motion } from 'framer-motion'
-
-import { AppWrap } from '../../wrapper'
-import { urlFor, client } from '../../client'
+import { AiFillEye, AiFillGithub } from 'react-icons/ai';
+import { motion } from 'framer-motion';
+import { AppWrap } from '../../wrapper';
+import { MotionWrap } from '../../wrapper';
+import { urlFor, client } from '../../client';
 
 import './Work.scss';
 
@@ -13,14 +13,15 @@ const Work = () => {
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
   const [works, setWorks] = useState([]);
   const [filterWork, setFilterWork] = useState([]);
-useEffect(() => {
-  const query = '*[_type == "works"]';
-  client.fetch(query)
-    .then((data) => {
-      setWorks(data);
-      setFilterWork(data);
-    })
-}, [])
+
+  useEffect(() => {
+    const query = '*[_type == "works"]';
+    client.fetch(query)
+      .then((data) => {
+        setWorks(data);
+        setFilterWork(data);
+      })
+  }, [])
 
   
   const handleWorkFilter = (item) => {
@@ -103,4 +104,8 @@ useEffect(() => {
   )
 }
 
-export default AppWrap(Work, 'work');
+export default AppWrap(
+  MotionWrap(Work, 'app__works'),
+    'work',
+    'app__primarybg'
+  );
