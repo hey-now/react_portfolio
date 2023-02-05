@@ -17,10 +17,10 @@ const Navbar = () => {
       </a>
     </div>
     <div className='app__navbar-sites'>
-      <a href='https://github.com/hey-now'>
+      <a href='https://github.com/hey-now' target={'blank'}>
         <img src={images.github} alt="github" />
       </a>
-      <a href='https://www.linkedin.com/in/andrew-rubinstein/'>
+      <a href='https://www.linkedin.com/in/andrew-rubinstein/' target={'blank'}>
         <img src={images.linkedin} alt="linkedin" />
       </a>
     </div>
