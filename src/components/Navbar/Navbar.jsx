@@ -16,6 +16,14 @@ const Navbar = () => {
         <img src={images.logo} alt="logo" />
       </a>
     </div>
+    <div className='app__navbar-sites'>
+      <a href='https://github.com/hey-now'>
+        <img src={images.github} alt="github" />
+      </a>
+      <a href='https://www.linkedin.com/in/andrew-rubinstein/'>
+        <img src={images.linkedin} alt="linkedin" />
+      </a>
+    </div>
     <ul className='app__navbar-links'>
       {['home', 'about', 'work', 'skills', 'contact'].map((item) => (
         <li className='app__flex p-text' key={`link-${item}`}>
@@ -24,7 +32,6 @@ const Navbar = () => {
         </li>
       ))}
     </ul>
-
     <div className='app__navbar-menu'>
         <HiMenuAlt4 onClick={() => setToggle(true)} />
 

@@ -22,20 +22,29 @@
     height: 30px;
   }
 }
+
 .app__navbar-sites {
+  flex: .3;
+  display: flex;
+  margin-left: 2rem;
+  justify-content: flex-start;
   img {
-    width: 200px;
+    width: auto;
     height: 30px;
+    margin: 1rem 1rem;
+  }
+  @media screen and (max-width: 900px) {
+    flex: 1;
   }
 }
 
 .app__navbar-links {
   flex: 1;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   list-style: none;
-  margin-right: 7rem;
+  margin-right: 5rem;
 
   li {
     margin: 0 1rem;
@@ -78,6 +87,7 @@
   height: 35px;
   border-radius: 50%;
   position: relative;
+  margin-right: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
